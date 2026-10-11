@@ -95,7 +95,16 @@
   };
   $$('.bag-trigger').forEach(button => button.addEventListener('click', openCart));
   $$('[data-cart-close]').forEach(button => button.addEventListener('click', closeCart));
-  addEventListener('keydown', e => { if (e.key === 'Escape') { closeCart(); closeMenu(); } });
+  addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeCart(); closeMenu(); }
+    if (e.key === 'Tab' && cart.classList.contains('is-open')) {
+      const focusable = $$('button, a, input:not([disabled])', cart).filter(el => !el.closest('[hidden]'));
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
 
   const renderCart = added => {
     $('.cart__empty').hidden = added;
@@ -103,19 +112,30 @@
     $('.cart__footer').hidden = !added;
     $$('.bag-count').forEach(el => { el.textContent = added ? '(1)' : '(0)'; el.setAttribute('aria-label', `${added ? 1 : 0} items`); });
     if (added) {
+      $('.cart__item h3').textContent = selection.name;
       $('.cart__variant').textContent = selection.variant;
       $('.cart__price').textContent = `€${selection.price}`;
       $('.cart__subtotal').textContent = `€${selection.price}`;
     }
   };
-  $('.add-button').addEventListener('click', () => { renderCart(true); openCart(); });
+  $('.add-button').addEventListener('click', () => {
+    const selectedSize = $('input[name="size"]:checked');
+    selection = { name: 'Lueur No. 01', variant: selectedSize.value, price: Number(selectedSize.dataset.price) };
+    renderCart(true);
+    openCart();
+  });
   $('.remove-item').addEventListener('click', () => renderCart(false));
   $('[data-sample]').addEventListener('click', e => {
     e.preventDefault();
     selection = { name: 'Discovery Set', variant: '3 × 2 ml', price: 30 };
     renderCart(true);
-    $('.cart__item h3').textContent = selection.name;
     openCart();
+  });
+
+  $('.checkout-button').addEventListener('click', e => {
+    const label = e.currentTarget.firstChild;
+    label.textContent = 'Checkout available at launch ';
+    e.currentTarget.disabled = true;
   });
 
   $('#newsletter-form').addEventListener('submit', e => {
