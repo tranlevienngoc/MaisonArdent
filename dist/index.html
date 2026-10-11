@@ -3,30 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#17130f">
-  <meta name="description" content="Maison Ardent — fragrance as memory, held in matter.">
-  <title>Maison Ardent — Lueur No. 01</title>
+  <meta name="theme-color" content="#120e0b">
+  <meta name="description" content="Maison Ardent — fragrance as memory, held in matter. An editorial digital flagship translating scent into temporal ritual.">
+  <title>Maison Ardent — Lueur No. 01 · Extrait de Parfum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="preload" href="assets/hero.jpg" as="image" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Cinematic Loader -->
   <div class="loader" aria-hidden="true">
-    <div class="loader__word">MAISON ARDENT</div>
-    <div class="loader__line"><span></span></div>
+    <div class="loader__content">
+      <div class="loader__word">MAISON ARDENT</div>
+      <div class="loader__sub">PARIS · GRASSE</div>
+      <div class="loader__line"><span></span></div>
+    </div>
   </div>
 
+  <!-- Site Navigation -->
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="Maison Ardent home">
       <span>MAISON</span><span>ARDENT</span>
     </a>
     <nav class="desktop-nav" aria-label="Primary navigation">
       <a href="#story">The Maison</a>
-      <a href="#notes">Fragrances</a>
+      <a href="#notes">Olfactory Scrollytelling</a>
       <a href="#ritual">The Ritual</a>
+      <a href="#sampling">Discovery Set</a>
     </nav>
     <div class="header-actions">
+      <button class="text-button audio-toggle" type="button" aria-pressed="false" aria-label="Toggle atmospheric soundscape">
+        <span class="audio-wave" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span class="audio-label">Atmosphere</span>
+      </button>
       <button class="text-button bag-trigger" type="button" aria-haspopup="dialog">
         Bag <span class="bag-count" aria-label="0 items">(0)</span>
       </button>
@@ -37,20 +52,29 @@
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
   </header>
 
+  <!-- Mobile Drawer Menu -->
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <nav aria-label="Mobile navigation">
       <a href="#story"><small>01</small>The Maison</a>
-      <a href="#notes"><small>02</small>Fragrances</a>
+      <a href="#notes"><small>02</small>Olfactory Notes</a>
       <a href="#ritual"><small>03</small>The Ritual</a>
+      <a href="#sampling"><small>04</small>Discovery Set</a>
     </nav>
-    <p>Paris · Grasse<br>Private appointments</p>
+    <div class="mobile-menu__footer">
+      <button class="text-button audio-toggle-mobile" type="button">
+        <span class="audio-label">Atmosphere: Off</span>
+      </button>
+      <p>Paris · Grasse<br>Private appointments upon request</p>
+    </div>
   </div>
 
   <main id="main">
+    <!-- Hero Section -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__image-wrap">
-        <img class="hero__image" src="assets/hero.jpg" alt="Amber perfume bottle resting on raw travertine in warm light">
+        <img class="hero__image" src="assets/hero.jpg" alt="Amber perfume bottle resting on raw travertine in warm directional light">
         <div class="hero__veil"></div>
+        <div class="hero__glint" aria-hidden="true"></div>
       </div>
       <div class="hero__eyebrow reveal">Extrait de Parfum · Chapter I</div>
       <div class="hero__title" id="hero-title" aria-label="Lueur">
@@ -64,15 +88,19 @@
         <span>Discover the fragrance</span>
         <svg viewBox="0 0 20 31" aria-hidden="true"><path d="M10 0v29M1 20l9 9 9-9"/></svg>
       </a>
-      <p class="hero__edition reveal">No. 01 / 2026<br>Paris — France</p>
+      <div class="hero__edition reveal">
+        <span>No. 01 / 2026</span>
+        <span>28% Extrait · Grasse / Paris</span>
+      </div>
     </section>
 
+    <!-- 01 Manifesto / Editorial Section -->
     <section class="manifesto paper" id="story">
       <div class="section-index reveal">01 &nbsp;—&nbsp; The Maison</div>
       <p class="manifesto__lead reveal">Scent is not worn.<br><em>It is remembered.</em></p>
       <div class="manifesto__body reveal">
-        <p>Maison Ardent composes fragrance as a form of living architecture—built in light, shadow and time.</p>
-        <p>Each extrait is made slowly in Grasse and released only when every note has found its place. No seasons. No spectacle. Only materials of uncommon depth.</p>
+        <p>Maison Ardent composes fragrance as a form of living architecture—built in light, shadow and time. We believe scent is not an accessory, but a memory held in matter.</p>
+        <p>Each extrait is matured slowly in Grasse and bottled in Paris only when every raw material has found its place. No seasonal trends. No synthetic clamor. Only matter of uncommon depth.</p>
       </div>
       <div class="manifesto__seal reveal" aria-hidden="true">
         <svg viewBox="0 0 160 160">
@@ -83,121 +111,387 @@
       </div>
     </section>
 
+    <!-- Interlude Section -->
     <section class="interlude" aria-label="Fragrance composition introduction">
       <div class="interlude__image reveal-image">
-        <img src="assets/botanical.jpg" alt="Dark rose, iris, saffron and cedar in amber light" loading="lazy">
+        <img src="assets/botanical.jpg" alt="Dark rose, iris, saffron and cedar in amber chiaroscuro light" loading="lazy">
       </div>
       <div class="interlude__copy reveal">
-        <span>The Composition</span>
+        <span>The Olfactory Pyramid</span>
         <h2>Not a list<br>of ingredients.<br><em>A passage of time.</em></h2>
       </div>
-      <p class="interlude__caption reveal">Lueur unfolds in three movements. Scroll slowly.</p>
+      <p class="interlude__caption reveal">Lueur unfolds in three temporal movements. Scroll slowly to experience evaporation on skin.</p>
     </section>
 
-    <section class="notes" id="notes" aria-label="The olfactory pyramid">
+    <!-- 06 Scrollytelling Olfactory Pyramid -->
+    <section class="notes" id="notes" aria-label="The olfactory pyramid scrollytelling">
+      <!-- Sticky Visual Presentation -->
       <div class="notes__visual" aria-hidden="true">
-        <img src="assets/botanical.jpg" alt="" loading="lazy">
+        <!-- Layer 0: Top Notes Macro -->
+        <div class="notes__visual-layer notes__visual-layer--0 is-active">
+          <img src="assets/top_notes.jpg" alt="Top notes macro: bergamot mist and saffron on travertine" loading="lazy">
+        </div>
+        <!-- Layer 1: Heart Notes Macro -->
+        <div class="notes__visual-layer notes__visual-layer--1">
+          <img src="assets/botanical.jpg" alt="Heart notes macro: velvet rose and orris in warm amber light" loading="lazy">
+        </div>
+        <!-- Layer 2: Base Notes Macro -->
+        <div class="notes__visual-layer notes__visual-layer--2">
+          <img src="assets/detail.jpg" alt="Base notes macro: resinous amber glass and smoked leather" loading="lazy">
+        </div>
+
         <div class="notes__tint"></div>
-        <div class="notes__number"><span>01</span><span>02</span><span>03</span></div>
+        <div class="notes__number">
+          <span>01</span><span>02</span><span>03</span>
+        </div>
+        <div class="notes__movement-tag">
+          <span class="movement-label">Movement</span>
+          <span class="movement-name">The First Impression</span>
+        </div>
       </div>
+
+      <!-- Scrollytelling Panels with Temporal Chapters -->
       <div class="notes__chapters">
-        <article class="note-panel note-panel--top" data-note="0">
+        <!-- Interactive Scrubber Bar -->
+        <div class="notes__timeline" aria-label="Olfactory timeline navigation">
+          <div class="notes__timeline-bar"><span class="notes__timeline-fill"></span></div>
+          <div class="notes__timeline-steps">
+            <button type="button" class="notes__step is-active" data-step="0">
+              <span class="step-num">I</span>
+              <span class="step-label">Top</span>
+              <span class="step-time">00—20m</span>
+            </button>
+            <button type="button" class="notes__step" data-step="1">
+              <span class="step-num">II</span>
+              <span class="step-label">Heart</span>
+              <span class="step-time">20m—4h</span>
+            </button>
+            <button type="button" class="notes__step" data-step="2">
+              <span class="step-num">III</span>
+              <span class="step-label">Base</span>
+              <span class="step-time">4—12h</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Movement I: Top Notes -->
+        <article class="note-panel note-panel--top" data-note="0" id="note-movement-0">
           <div class="note-panel__content">
-            <p class="kicker">I · The First Impression</p>
+            <p class="kicker">Movement I · The First Impression</p>
             <h2>Top<br><em>Notes</em></h2>
-            <p class="note-panel__prose">A flash of brightness. Saffron warmed by skin, bergamot peel broken between the fingers.</p>
-            <ul><li>Bergamot</li><li>Saffron</li><li>Pink Pepper</li></ul>
-            <p class="note-panel__time">00 — 20 min</p>
+            <p class="note-panel__prose">A flash of brightness. Saffron warmed by skin temperature, green bergamot peel broken between fingers, with a dry spark of pink pepper.</p>
+            
+            <div class="notes-accords" aria-label="Top notes accords">
+              <div class="accord-card" data-accord="bergamot">
+                <button type="button" class="accord-header" aria-expanded="false">
+                  <span class="accord-title">Calabrian Bergamot</span>
+                  <span class="accord-origin">Italy · Cold-pressed</span>
+                  <i class="accord-icon">+</i>
+                </button>
+                <div class="accord-detail">
+                  <p>Expressing green, effervescent citrus oils with a crystalline solar sparkle that lifts immediately into the air.</p>
+                  <div class="accord-tags"><span>Solar</span><span>Hesperidic</span><span>00 — 20 min</span></div>
+                </div>
+              </div>
+
+              <div class="accord-card" data-accord="saffron">
+                <button type="button" class="accord-header" aria-expanded="false">
+                  <span class="accord-title">Crimson Saffron</span>
+                  <span class="accord-origin">Khorasan · Sun-dried</span>
+                  <i class="accord-icon">+</i>
+                </button>
+                <div class="accord-detail">
+                  <p>Bittersweet stigmata conferring a golden, metallic glow that prefigures the leathery depth to follow.</p>
+                  <div class="accord-tags"><span>Spiced</span><span>Warm Gold</span><span>10 — 40 min</span></div>
+                </div>
+              </div>
+
+              <div class="accord-card" data-accord="pepper">
+                <button type="button" class="accord-header" aria-expanded="false">
+                  <span class="accord-title">Pink Peppercorn</span>
+                  <span class="accord-origin">Madagascar · Steam-distilled</span>
+                  <i class="accord-icon">+</i>
+                </button>
+                <div class="accord-detail">
+                  <p>A fresh, airy spice with floral and berry nuances, bridging initial brightness into velvety floracy.</p>
+                  <div class="accord-tags"><span>Piquant</span><span>Airy</span><span>05 — 30 min</span></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="note-panel__time">Evaporation Duration: 00 — 20 min · High Volatility</p>
           </div>
         </article>
-        <article class="note-panel note-panel--heart" data-note="1">
+
+        <!-- Movement II: Heart Notes -->
+        <article class="note-panel note-panel--heart" data-note="1" id="note-movement-1">
           <div class="note-panel__content">
-            <p class="kicker">II · The Identity</p>
+            <p class="kicker">Movement II · The Identity</p>
             <h2>Heart<br><em>Notes</em></h2>
-            <p class="note-panel__prose">The composition draws closer. Rose absolute opens into powdered iris and the clean grain of cedar.</p>
-            <ul><li>Rose Absolute</li><li>Orris</li><li>Cedarwood</li></ul>
-            <p class="note-panel__time">20 min — 4 hr</p>
+            <p class="note-panel__prose">The composition draws closer. Photography turns macro; layers overlap. Rose absolute unfurls into powdered Florentine iris and the clean grain of aged cedar.</p>
+            
+            <div class="notes-accords" aria-label="Heart notes accords">
+              <div class="accord-card" data-accord="rose">
+                <button type="button" class="accord-header" aria-expanded="false">
+                  <span class="accord-title">Rose Absolute</span>
+                  <span class="accord-origin">Grasse · Centifolia</span>
+                  <i class="accord-icon">+</i>
+                </button>
+                <div class="accord-detail">
+                  <p>Honeyed, wine-dark petals hand-harvested at dawn in Grasse, presenting intoxicating richness and deep velvet texture.</p>
+                  <div class="accord-tags"><span>Velvet Floral</span><span>Honeyed</span><span>30 min — 4 hr</span></div>
+                </div>
+              </div>
+
+              <div class="accord-card" data-accord="orris">
+                <button type="button" class="accord-header" aria-expanded="false">
+                  <span class="accord-title">Florentine Orris</span>
+                  <span class="accord-origin">Tuscany · Aged 3 Years</span>
+                  <i class="accord-icon">+</i>
+                </button>
+                <div class="accord-detail">
+                  <p>A noble rhizome cured for three seasons in cedar vaults, imparting a powdery, aristocratic suede texture.</p>
+                  <div class="accord-tags"><span>Powdery</span><span>Suede</span><span>1 hr — 6 hr</span></div>
+                </div>
+              </div>
+
+              <div class="accord-card" data-accord="cedar">
+                <button type="button" class="accord-header" aria-expanded="false">
+                  <span class="accord-title">Atlas Cedarwood</span>
+                  <span class="accord-origin">Morocco · Heartwood</span>
+                  <i class="accord-icon">+</i>
+                </button>
+                <div class="accord-detail">
+                  <p>Architectural heartwood conferring dry warmth, pencil shavings elegance, and an enduring structural spine.</p>
+                  <div class="accord-tags"><span>Woody</span><span>Structured</span><span>1 hr — 8 hr</span></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="note-panel__time">Evaporation Duration: 20 min — 4 hr · Medium Volatility</p>
           </div>
         </article>
-        <article class="note-panel note-panel--base" data-note="2">
+
+        <!-- Movement III: Base Notes -->
+        <article class="note-panel note-panel--base" data-note="2" id="note-movement-2">
           <div class="note-panel__content">
-            <p class="kicker">III · The Memory</p>
+            <p class="kicker">Movement III · The Memory</p>
             <h2>Base<br><em>Notes</em></h2>
-            <p class="note-panel__prose">What remains: resinous oud, soft leather and amber made intimate by a trace of musk.</p>
-            <ul><li>Oud</li><li>Leather</li><li>Amber</li><li>Musk</li></ul>
-            <p class="note-panel__time">4 — 12 hr</p>
+            <p class="note-panel__prose">What remains on skin: smoky resinous oud, soft worn saddlery leather and deep petrified amber, made intimate by a trace of skin musk.</p>
+            
+            <div class="notes-accords" aria-label="Base notes accords">
+              <div class="accord-card" data-accord="oud">
+                <button type="button" class="accord-header" aria-expanded="false">
+                  <span class="accord-title">Smoked Wild Oud</span>
+                  <span class="accord-origin">Assam · Aquilaria</span>
+                  <i class="accord-icon">+</i>
+                </button>
+                <div class="accord-detail">
+                  <p>Balsamic wood resin harvested sustainably, offering animalic warmth and a contemplative incense trail.</p>
+                  <div class="accord-tags"><span>Resinous</span><span>Incense</span><span>4 — 14 hr</span></div>
+                </div>
+              </div>
+
+              <div class="accord-card" data-accord="leather">
+                <button type="button" class="accord-header" aria-expanded="false">
+                  <span class="accord-title">Patinated Leather</span>
+                  <span class="accord-origin">Artisanal Accord</span>
+                  <i class="accord-icon">+</i>
+                </button>
+                <div class="accord-detail">
+                  <p>Soft vegetal leather reminiscent of antique book bindings, warm saddlery, and shadows in an old library.</p>
+                  <div class="accord-tags"><span>Cuir</span><span>Tactile</span><span>4 — 12 hr</span></div>
+                </div>
+              </div>
+
+              <div class="accord-card" data-accord="amber">
+                <button type="button" class="accord-header" aria-expanded="false">
+                  <span class="accord-title">Petrified Amber &amp; Musk</span>
+                  <span class="accord-origin">Labdanum &amp; Skin Chemistry</span>
+                  <i class="accord-icon">+</i>
+                </button>
+                <div class="accord-detail">
+                  <p>Golden fossilized resin melted into intimate skin musk that lingers on collars and scarves through the following day.</p>
+                  <div class="accord-tags"><span>Balsamic</span><span>Indelible</span><span>8 — 24 hr</span></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="note-panel__time">Evaporation Duration: 4 — 12+ hr · Indelible Persistence</p>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- 02 Statement Section -->
     <section class="statement paper">
       <div class="section-index reveal">02 &nbsp;—&nbsp; Lueur No. 01</div>
       <blockquote class="reveal">“The instant before<br>day becomes <em>memory.</em>”</blockquote>
+      
+      <!-- Interactive Evaporation Graph -->
+      <div class="evaporation-chart reveal" aria-label="Fragrance concentration evaporation curve">
+        <div class="chart-header">
+          <span>Diffusion &amp; Evaporation Profile</span>
+          <span>Extrait Concentration · 28%</span>
+        </div>
+        <svg class="chart-svg" viewBox="0 0 600 120" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#e29b4d" stop-opacity="0.85"/>
+              <stop offset="35%" stop-color="#b85f20" stop-opacity="0.75"/>
+              <stop offset="100%" stop-color="#5a2c17" stop-opacity="0.6"/>
+            </linearGradient>
+            <linearGradient id="fillGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#c77a31" stop-opacity="0.28"/>
+              <stop offset="100%" stop-color="#c77a31" stop-opacity="0.0"/>
+            </linearGradient>
+          </defs>
+          <path d="M0,20 Q120,40 240,65 T600,105 L600,120 L0,120 Z" fill="url(#fillGrad)"/>
+          <path d="M0,20 Q120,40 240,65 T600,105" fill="none" stroke="url(#amberGrad)" stroke-width="2.5"/>
+          <circle cx="20" cy="22" r="3.5" fill="#e29b4d"/>
+          <circle cx="210" cy="60" r="3.5" fill="#b85f20"/>
+          <circle cx="560" cy="103" r="3.5" fill="#693019"/>
+        </svg>
+        <div class="chart-legend">
+          <span>0h · Radiant Top</span>
+          <span>3h · Intimate Heart</span>
+          <span>12h+ · Indelible Memory</span>
+        </div>
+      </div>
+
       <div class="statement__meta reveal">
-        <span>Family<br><b>Woody · Amber</b></span>
-        <span>Concentration<br><b>Extrait 28%</b></span>
-        <span>Perfumer<br><b>Élise Renard</b></span>
+        <span>Olfactory Family<br><b>Woody · Resinous Amber</b></span>
+        <span>Concentration<br><b>Extrait de Parfum 28%</b></span>
+        <span>Nose &amp; Perfumer<br><b>Élise Renard (Grasse)</b></span>
       </div>
     </section>
 
+    <!-- 08 Progressive Commerce & Product Detail -->
     <section class="product" id="ritual">
       <div class="product__image reveal-image">
-        <img src="assets/detail.jpg" alt="Close detail of amber perfume glass and stone cap" loading="lazy">
-        <span>Hand-filled in Paris</span>
+        <img src="assets/detail.jpg" alt="Macro detail of amber perfume glass flacon and carved travertine stone cap" loading="lazy">
+        <div class="product__badge">Hand-filled in Paris · Individually Numbered</div>
       </div>
       <div class="product__panel">
         <div class="product__top reveal">
-          <p class="kicker">Maison Ardent · No. 01</p>
+          <p class="kicker">Maison Ardent · Chapter I</p>
           <h2>Lueur</h2>
-          <p class="product__description">A radiant amber built around the tension between saffron, rose and charred woods. Luminous at first. Intimate at last.</p>
+          <p class="product__tagline">Extrait de Parfum · No. 01</p>
+          <p class="product__description">A radiant amber built around the electric tension between saffron, dark centifolia rose and charred balsamic woods. Luminous at first. Intimate at last.</p>
+          
+          <div class="bottle-specs">
+            <div><span>Bottle</span><b>Hand-blown heavy glass flacon</b></div>
+            <div><span>Cap</span><b>Solid chiseled raw travertine</b></div>
+            <div><span>Batch</span><b>Limited 2026 Vintage run</b></div>
+          </div>
         </div>
+
         <div class="purchase reveal">
           <fieldset class="size-select">
-            <legend>Choose volume</legend>
-            <label><input type="radio" name="size" value="50 ml" data-price="250" checked><span>50 ml</span></label>
-            <label><input type="radio" name="size" value="100 ml" data-price="360"><span>100 ml</span></label>
+            <legend>Choose Volume</legend>
+            <label>
+              <input type="radio" name="size" value="50 ml" data-price="250" checked>
+              <span>50 ml &nbsp;·&nbsp; €250</span>
+            </label>
+            <label>
+              <input type="radio" name="size" value="100 ml" data-price="360">
+              <span>100 ml &nbsp;·&nbsp; €360</span>
+            </label>
           </fieldset>
-          <button class="add-button" type="button">
-            <span>Add to bag</span><span class="product-price">€250</span>
+
+          <button class="add-button" type="button" id="add-to-bag-button">
+            <span>Add to Bag</span>
+            <span class="product-price">€250</span>
           </button>
+
+          <!-- Complimentary Sample Guarantee -->
+          <div class="sample-guarantee">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <div>
+              <strong>Complimentary 2 ml Sample Included</strong>
+              <p>Test the fragrance on skin first. Keep the full-size bottle sealed until you are completely certain. Free return within 30 days if unopened.</p>
+            </div>
+          </div>
+
           <div class="service-notes">
-            <button type="button" aria-expanded="false"><span>Complimentary sample</span><i>+</i></button>
-            <div><p>Every full-size fragrance arrives with a matching 2 ml sample, allowing you to try before opening the bottle.</p></div>
-            <button type="button" aria-expanded="false"><span>Delivery &amp; returns</span><i>+</i></button>
-            <div><p>Complimentary delivery in Europe. Unopened bottles may be returned within 30 days.</p></div>
+            <button type="button" aria-expanded="false">
+              <span>Complimentary Personalization</span><i>+</i>
+            </button>
+            <div>
+              <p>Add up to three hand-engraved initials on the travertine cap. Complimentary with every direct purchase.</p>
+              <div class="engraving-input-wrap">
+                <input type="text" id="engraving-input" placeholder="e.g. M.A." maxlength="3" aria-label="Engraving initials">
+                <small>Monogram initials are applied in Paris by our master engraver.</small>
+              </div>
+            </div>
+
+            <button type="button" aria-expanded="false">
+              <span>Delivery, Returns &amp; Ritual Packaging</span><i>+</i>
+            </button>
+            <div>
+              <p>Complimentary carbon-neutral express courier throughout Europe, the US, and Asia. Unopened bottles may be returned within 30 days. Ships in a bespoke black linen box with organic wax seal.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="sampling paper">
+    <!-- 08 Discovery Set Ritual -->
+    <section class="sampling paper" id="sampling">
       <div class="sampling__count reveal">03</div>
       <div class="sampling__copy reveal">
-        <p class="kicker">Not ready to choose?</p>
+        <p class="kicker">Not ready to commit to a full flacon?</p>
         <h2>Begin with<br><em>the ritual.</em></h2>
-        <p>Discover three Maison Ardent extraits on skin. Your discovery set is redeemable against any full-size bottle.</p>
-        <a href="#" class="line-link" data-sample>Add discovery set <span>€30</span></a>
+        <p>Experience three Maison Ardent extraits on skin over time. The complete Discovery Set features 3 × 2 ml sprays hand-filled in Paris.</p>
+        <p class="sampling__credit-note"><strong>The Discovery Guarantee:</strong> The €30 cost of your set is 100% credited toward any subsequent 50 ml or 100 ml bottle.</p>
+        
+        <div class="vial-selector" role="tablist" aria-label="Discovery set fragrances">
+          <button type="button" class="vial-tab is-active" data-vial="0" role="tab" aria-selected="true">
+            <b>I</b> Lueur No. 01
+          </button>
+          <button type="button" class="vial-tab" data-vial="1" role="tab" aria-selected="false">
+            <b>II</b> Ambre Fumé
+          </button>
+          <button type="button" class="vial-tab" data-vial="2" role="tab" aria-selected="false">
+            <b>III</b> Bois Céleste
+          </button>
+        </div>
+
+        <div class="vial-description" id="vial-desc">
+          <p><strong>Lueur No. 01:</strong> Saffron, Grasse Rose Centifolia, Florentine Orris &amp; Smoked Wild Oud.</p>
+        </div>
+
+        <a href="#" class="line-link" data-sample id="add-discovery-set-button">
+          <span>Add Discovery Set to Bag</span>
+          <span>€30</span>
+        </a>
       </div>
-      <div class="sampling__vials reveal" aria-hidden="true">
-        <div class="vial"><i></i><span>I</span></div>
-        <div class="vial"><i></i><span>II</span></div>
-        <div class="vial"><i></i><span>III</span></div>
+
+      <div class="sampling__visual reveal">
+        <div class="sampling__img-wrap">
+          <img src="assets/discovery_set.jpg" alt="Three miniature perfume vials in bespoke black linen box on travertine" loading="lazy">
+        </div>
+        <div class="sampling__badge">3 × 2 ml Sprays · Fully Redeemable</div>
       </div>
     </section>
 
+    <!-- Closing Cinematic Statement -->
     <section class="closing">
-      <img src="assets/hero.jpg" alt="" loading="lazy">
+      <img src="assets/hero.jpg" alt="Maison Ardent flacon in evening chiaroscuro" loading="lazy">
       <div class="closing__veil"></div>
       <p class="reveal">A fragrance cannot<br>travel through a screen.</p>
       <h2 class="reveal">An emotion <em>can.</em></h2>
     </section>
   </main>
 
+  <!-- Editorial Footer -->
   <footer class="footer">
     <div class="footer__mark">M<span>A</span></div>
     <div class="footer__newsletter">
       <p>Letters from the Maison</p>
+      <p class="footer__newsletter-sub">Occasional notes on perfume composition, architecture, and limited vintage releases.</p>
       <form id="newsletter-form">
         <label class="sr-only" for="email">Email address</label>
         <input id="email" type="email" placeholder="Your email address" required>
@@ -206,37 +500,105 @@
       <span class="form-message" role="status"></span>
     </div>
     <div class="footer__links">
-      <div><p>Explore</p><a href="#story">The Maison</a><a href="#notes">Fragrances</a><a href="#ritual">Discovery Set</a></div>
-      <div><p>Follow</p><a href="#">Instagram</a><a href="#">Journal</a><a href="#">Contact</a></div>
+      <div>
+        <p>Explore</p>
+        <a href="#story">The Maison</a>
+        <a href="#notes">Olfactory Scrollytelling</a>
+        <a href="#ritual">Lueur No. 01</a>
+        <a href="#sampling">Discovery Set</a>
+      </div>
+      <div>
+        <p>Maison</p>
+        <a href="#story">Private Appointments</a>
+        <a href="#story">Grasse Atelier</a>
+        <a href="#story">Archives</a>
+        <a href="#story">Contact</a>
+      </div>
     </div>
-    <div class="footer__bottom"><span>© 2026 Maison Ardent</span><span>Paris · France</span><a href="#top">Back to top ↑</a></div>
+    <div class="footer__bottom">
+      <span>© 2026 Maison Ardent · All rights reserved</span>
+      <span>Paris · Grasse · Worldwide</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
   </footer>
 
+  <!-- Bag Drawer (Progressive Commerce) -->
   <div class="cart-overlay" data-cart-close></div>
   <aside class="cart" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
     <div class="cart__header">
-      <p id="cart-title">Your ritual</p>
+      <p id="cart-title">Your Ritual Bag</p>
       <button type="button" data-cart-close aria-label="Close bag">×</button>
     </div>
+
     <div class="cart__content">
+      <!-- Empty Bag State -->
       <div class="cart__empty">
         <p>Your bag is empty.</p>
         <span>Take your time. The right fragrance waits.</span>
       </div>
+
+      <!-- Cart Item -->
       <div class="cart__item" hidden>
-        <div class="cart__thumb"><img src="assets/hero.jpg" alt=""></div>
-        <div><small>Extrait de Parfum</small><h3>Lueur No. 01</h3><p class="cart__variant">50 ml</p><button type="button" class="remove-item">Remove</button></div>
-        <strong class="cart__price">€250</strong>
+        <div class="cart__thumb">
+          <img src="assets/hero.jpg" alt="Selected fragrance" id="cart-item-img">
+        </div>
+        <div class="cart__info">
+          <small>Extrait de Parfum · Chapter I</small>
+          <h3 id="cart-item-name">Lueur No. 01</h3>
+          <p class="cart__variant" id="cart-item-variant">50 ml</p>
+          <p class="cart__engraving-tag" id="cart-item-engraving" hidden></p>
+          <button type="button" class="remove-item">Remove</button>
+        </div>
+        <strong class="cart__price" id="cart-item-price">€250</strong>
+      </div>
+
+      <!-- Complimentary Sample Item in Bag -->
+      <div class="cart__sample-perk" hidden>
+        <div class="sample-perk-icon">✦</div>
+        <div>
+          <strong>Complimentary 2 ml Matching Sample Included</strong>
+          <p>Spray the sample on skin before opening the flacon. Sealed flacons are 100% returnable.</p>
+        </div>
       </div>
     </div>
+
     <div class="cart__footer" hidden>
-      <p><span>Subtotal</span><strong class="cart__subtotal">€250</strong></p>
-      <button class="checkout-button" type="button">Continue to checkout <span>→</span></button>
-      <small>Complimentary delivery &amp; a sample with every order.</small>
+      <div class="cart__shipping-note">
+        <span>✓ Complimentary climate-neutral courier &amp; gift box</span>
+      </div>
+      <p class="cart__subtotal-line">
+        <span>Subtotal</span>
+        <strong class="cart__subtotal">€250</strong>
+      </p>
+      <button class="checkout-button" type="button">
+        <span>Proceed to Secure Checkout</span>
+        <span>→</span>
+      </button>
+      <small>Crafted and fulfilled by Maison Ardent Paris · Grasse.</small>
     </div>
   </aside>
 
-  <div class="cursor" aria-hidden="true"><span>View</span></div>
+  <!-- Checkout Ritual Confirmation Modal -->
+  <div class="checkout-modal" id="checkout-modal" aria-hidden="true" role="dialog">
+    <div class="checkout-modal__overlay"></div>
+    <div class="checkout-modal__card">
+      <button class="checkout-modal__close" type="button" aria-label="Close dialog">×</button>
+      <div class="checkout-modal__seal">✦</div>
+      <small>Maison Ardent · Digital Flagship</small>
+      <h3>The Ritual Awaits</h3>
+      <p>Thank you for initiating your bespoke order with Maison Ardent. In this demonstration prototype, checkout is connected to Shopify Headless Commerce API.</p>
+      <div class="checkout-modal__summary">
+        <div><span>Selection:</span> <strong id="modal-summary-name">Lueur No. 01 (50 ml)</strong></div>
+        <div><span>Presentation:</span> <strong>Linen gift box with wax seal &amp; 2 ml sample</strong></div>
+        <div><span>Total:</span> <strong id="modal-summary-price">€250</strong></div>
+      </div>
+      <button class="text-button checkout-modal__dismiss" type="button">Return to Experience</button>
+    </div>
+  </div>
+
+  <!-- Custom Cursor for fine pointers -->
+  <div class="cursor" aria-hidden="true"><span>Explore</span></div>
+
   <script src="script.js"></script>
 </body>
 </html>
