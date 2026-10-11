@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17130f">
+  <meta name="description" content="Maison Ardent — fragrance as memory, held in matter.">
+  <title>Maison Ardent — Lueur No. 01</title>
+  <link rel="preload" href="assets/hero.jpg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="loader" aria-hidden="true">
+    <div class="loader__word">MAISON ARDENT</div>
+    <div class="loader__line"><span></span></div>
+  </div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Maison Ardent home">
+      <span>MAISON</span><span>ARDENT</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#story">The Maison</a>
+      <a href="#notes">Fragrances</a>
+      <a href="#ritual">The Ritual</a>
+    </nav>
+    <div class="header-actions">
+      <button class="text-button bag-trigger" type="button" aria-haspopup="dialog">
+        Bag <span class="bag-count" aria-label="0 items">(0)</span>
+      </button>
+      <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="sr-only">Open menu</span><i></i><i></i>
+      </button>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="#story"><small>01</small>The Maison</a>
+      <a href="#notes"><small>02</small>Fragrances</a>
+      <a href="#ritual"><small>03</small>The Ritual</a>
+    </nav>
+    <p>Paris · Grasse<br>Private appointments</p>
+  </div>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__image-wrap">
+        <img class="hero__image" src="assets/hero.jpg" alt="Amber perfume bottle resting on raw travertine in warm light">
+        <div class="hero__veil"></div>
+      </div>
+      <div class="hero__eyebrow reveal">Extrait de Parfum · Chapter I</div>
+      <div class="hero__title" id="hero-title" aria-label="Lueur">
+        <span>LUE</span><span>UR</span>
+      </div>
+      <div class="hero__aside reveal">
+        <span class="vertical-rule"></span>
+        <p>A study in warmth,<br>shadow &amp; memory.</p>
+      </div>
+      <a class="hero__discover reveal" href="#story">
+        <span>Discover the fragrance</span>
+        <svg viewBox="0 0 20 31" aria-hidden="true"><path d="M10 0v29M1 20l9 9 9-9"/></svg>
+      </a>
+      <p class="hero__edition reveal">No. 01 / 2026<br>Paris — France</p>
+    </section>
+
+    <section class="manifesto paper" id="story">
+      <div class="section-index reveal">01 &nbsp;—&nbsp; The Maison</div>
+      <p class="manifesto__lead reveal">Scent is not worn.<br><em>It is remembered.</em></p>
+      <div class="manifesto__body reveal">
+        <p>Maison Ardent composes fragrance as a form of living architecture—built in light, shadow and time.</p>
+        <p>Each extrait is made slowly in Grasse and released only when every note has found its place. No seasons. No spectacle. Only materials of uncommon depth.</p>
+      </div>
+      <div class="manifesto__seal reveal" aria-hidden="true">
+        <svg viewBox="0 0 160 160">
+          <defs><path id="sealPath" d="M80,80 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"/></defs>
+          <text><textPath href="#sealPath">COMPOSED IN GRASSE · BOTTLED IN PARIS · </textPath></text>
+          <path d="M80 56v48M62 80h36"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="interlude" aria-label="Fragrance composition introduction">
+      <div class="interlude__image reveal-image">
+        <img src="assets/botanical.jpg" alt="Dark rose, iris, saffron and cedar in amber light" loading="lazy">
+      </div>
+      <div class="interlude__copy reveal">
+        <span>The Composition</span>
+        <h2>Not a list<br>of ingredients.<br><em>A passage of time.</em></h2>
+      </div>
+      <p class="interlude__caption reveal">Lueur unfolds in three movements. Scroll slowly.</p>
+    </section>
+
+    <section class="notes" id="notes" aria-label="The olfactory pyramid">
+      <div class="notes__visual" aria-hidden="true">
+        <img src="assets/botanical.jpg" alt="" loading="lazy">
+        <div class="notes__tint"></div>
+        <div class="notes__number"><span>01</span><span>02</span><span>03</span></div>
+      </div>
+      <div class="notes__chapters">
+        <article class="note-panel note-panel--top" data-note="0">
+          <div class="note-panel__content">
+            <p class="kicker">I · The First Impression</p>
+            <h2>Top<br><em>Notes</em></h2>
+            <p class="note-panel__prose">A flash of brightness. Saffron warmed by skin, bergamot peel broken between the fingers.</p>
+            <ul><li>Bergamot</li><li>Saffron</li><li>Pink Pepper</li></ul>
+            <p class="note-panel__time">00 — 20 min</p>
+          </div>
+        </article>
+        <article class="note-panel note-panel--heart" data-note="1">
+          <div class="note-panel__content">
+            <p class="kicker">II · The Identity</p>
+            <h2>Heart<br><em>Notes</em></h2>
+            <p class="note-panel__prose">The composition draws closer. Rose absolute opens into powdered iris and the clean grain of cedar.</p>
+            <ul><li>Rose Absolute</li><li>Orris</li><li>Cedarwood</li></ul>
+            <p class="note-panel__time">20 min — 4 hr</p>
+          </div>
+        </article>
+        <article class="note-panel note-panel--base" data-note="2">
+          <div class="note-panel__content">
+            <p class="kicker">III · The Memory</p>
+            <h2>Base<br><em>Notes</em></h2>
+            <p class="note-panel__prose">What remains: resinous oud, soft leather and amber made intimate by a trace of musk.</p>
+            <ul><li>Oud</li><li>Leather</li><li>Amber</li><li>Musk</li></ul>
+            <p class="note-panel__time">4 — 12 hr</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="statement paper">
+      <div class="section-index reveal">02 &nbsp;—&nbsp; Lueur No. 01</div>
+      <blockquote class="reveal">“The instant before<br>day becomes <em>memory.</em>”</blockquote>
+      <div class="statement__meta reveal">
+        <span>Family<br><b>Woody · Amber</b></span>
+        <span>Concentration<br><b>Extrait 28%</b></span>
+        <span>Perfumer<br><b>Élise Renard</b></span>
+      </div>
+    </section>
+
+    <section class="product" id="ritual">
+      <div class="product__image reveal-image">
+        <img src="assets/detail.jpg" alt="Close detail of amber perfume glass and stone cap" loading="lazy">
+        <span>Hand-filled in Paris</span>
+      </div>
+      <div class="product__panel">
+        <div class="product__top reveal">
+          <p class="kicker">Maison Ardent · No. 01</p>
+          <h2>Lueur</h2>
+          <p class="product__description">A radiant amber built around the tension between saffron, rose and charred woods. Luminous at first. Intimate at last.</p>
+        </div>
+        <div class="purchase reveal">
+          <fieldset class="size-select">
+            <legend>Choose volume</legend>
+            <label><input type="radio" name="size" value="50 ml" data-price="250" checked><span>50 ml</span></label>
+            <label><input type="radio" name="size" value="100 ml" data-price="360"><span>100 ml</span></label>
+          </fieldset>
+          <button class="add-button" type="button">
+            <span>Add to bag</span><span class="product-price">€250</span>
+          </button>
+          <div class="service-notes">
+            <button type="button" aria-expanded="false"><span>Complimentary sample</span><i>+</i></button>
+            <div><p>Every full-size fragrance arrives with a matching 2 ml sample, allowing you to try before opening the bottle.</p></div>
+            <button type="button" aria-expanded="false"><span>Delivery &amp; returns</span><i>+</i></button>
+            <div><p>Complimentary delivery in Europe. Unopened bottles may be returned within 30 days.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sampling paper">
+      <div class="sampling__count reveal">03</div>
+      <div class="sampling__copy reveal">
+        <p class="kicker">Not ready to choose?</p>
+        <h2>Begin with<br><em>the ritual.</em></h2>
+        <p>Discover three Maison Ardent extraits on skin. Your discovery set is redeemable against any full-size bottle.</p>
+        <a href="#" class="line-link" data-sample>Add discovery set <span>€30</span></a>
+      </div>
+      <div class="sampling__vials reveal" aria-hidden="true">
+        <div class="vial"><i></i><span>I</span></div>
+        <div class="vial"><i></i><span>II</span></div>
+        <div class="vial"><i></i><span>III</span></div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <img src="assets/hero.jpg" alt="" loading="lazy">
+      <div class="closing__veil"></div>
+      <p class="reveal">A fragrance cannot<br>travel through a screen.</p>
+      <h2 class="reveal">An emotion <em>can.</em></h2>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__mark">M<span>A</span></div>
+    <div class="footer__newsletter">
+      <p>Letters from the Maison</p>
+      <form id="newsletter-form">
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" type="email" placeholder="Your email address" required>
+        <button type="submit" aria-label="Subscribe">→</button>
+      </form>
+      <span class="form-message" role="status"></span>
+    </div>
+    <div class="footer__links">
+      <div><p>Explore</p><a href="#story">The Maison</a><a href="#notes">Fragrances</a><a href="#ritual">Discovery Set</a></div>
+      <div><p>Follow</p><a href="#">Instagram</a><a href="#">Journal</a><a href="#">Contact</a></div>
+    </div>
+    <div class="footer__bottom"><span>© 2026 Maison Ardent</span><span>Paris · France</span><a href="#top">Back to top ↑</a></div>
+  </footer>
+
+  <div class="cart-overlay" data-cart-close></div>
+  <aside class="cart" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="cart__header">
+      <p id="cart-title">Your ritual</p>
+      <button type="button" data-cart-close aria-label="Close bag">×</button>
+    </div>
+    <div class="cart__content">
+      <div class="cart__empty">
+        <p>Your bag is empty.</p>
+        <span>Take your time. The right fragrance waits.</span>
+      </div>
+      <div class="cart__item" hidden>
+        <div class="cart__thumb"><img src="assets/hero.jpg" alt=""></div>
+        <div><small>Extrait de Parfum</small><h3>Lueur No. 01</h3><p class="cart__variant">50 ml</p><button type="button" class="remove-item">Remove</button></div>
+        <strong class="cart__price">€250</strong>
+      </div>
+    </div>
+    <div class="cart__footer" hidden>
+      <p><span>Subtotal</span><strong class="cart__subtotal">€250</strong></p>
+      <button type="button">Continue to checkout <span>→</span></button>
+      <small>Complimentary delivery &amp; a sample with every order.</small>
+    </div>
+  </aside>
+
+  <div class="cursor" aria-hidden="true"><span>View</span></div>
+  <script src="script.js"></script>
+</body>
+</html>
